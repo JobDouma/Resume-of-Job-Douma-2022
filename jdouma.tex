@@ -1,0 +1,185 @@
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{AwsomeBlue}{HTML}{232A64}
+% \definecolor{PastelRed}{HTML}{FF6961}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{name}{black}
+% \colorlet{tagline}{PastelRed}
+\colorlet{heading}{AwsomeBlue}
+\colorlet{headingrule}{AwsomeBlue}
+% \colorlet{subheading}{PastelRed}
+\colorlet{accent}{AwsomeBlue}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+% \renewcommand{\itemmarker}{{\small\textbullet}}
+% \renewcommand{\ratingmarker}{\faCircle}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication li\addbibresource{references.bib}st
+\input{pubs-authoryear}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+% \input{pubs-num}
+
+\addbibresource{references.bib}
+
+\begin{document}
+\name{\href{https://www.facebook.com/job.douma/}{Job Douma (J.B.P.)}}
+\tagline{}
+\photoR{2.5cm}{job2}
+\personalinfo{%
+  \printinfo{\faBirthdayCake}{xxxxxx xx, xxxx}
+  \email{xxxxxxxx@xxxxxxx.xxx}
+  \phone{+xx (x) x xxxx xxxx}
+  \mailaddress{xxxxxxxxxx xx, xxxxxx, Nijmegen}
+  \location{Nijmegen, NL}
+  \linkedin{Job-Douma}
+}
+
+\makecvheader
+\AtBeginEnvironment{itemize}{\small}
+\columnratio{0.6} %Left/right column width ratio to 6:4.
+\begin{paracol}{2}
+
+\cvsection{Experience}
+
+\cvevent{Cyber Security Engineer}{\href{https://www.ing.nl/}{ING}}{Sep 2022 - Present day}{Amsterdam, NL}
+\small{Full-time \textbf{Cyber Security Engineer}. Team: IT \& Infrastructure.}
+
+\divider
+
+\cvevent{Cyber Security Professional}{\href{https://www.fox-it.com/}{Fox-IT}}{Aug 2021 - Sep 2022}{Delft, NL}
+\small{My work at \textbf{Fox-IT} consisted of two concurrent functions:}\smallskip
+
+\begin{itemize}
+    \item Full-time \textbf{Microsoft Sentinel Team Lead}. Team: Product Delivery. Duties include: Microsoft Sentinel (Azure) managed service delivery/activation and cloud advisory services to customers.
+    \item Part-time \textbf{Business Security Consultant}. Team: Risk Management and Governance. Duties include: Cyber Security Scans/Assessments (CSS/CSA) and Security Architecture Reviews (SAR) based on interviews with the client and its suppliers.
+    % Duties include reviewing and approving the above documents and presenting the security findings to the client.
+\end{itemize}
+   
+\divider
+
+\cvevent{Cyber Security Analyst (\href{https://theses.ubn.ru.nl/handle/123456789/10931}{MSc Thesis})}{\href{https://www.secura.com/}{Secura B.V.}}{Oct 2020 -- Jun 2021}{Amsterdam, NL}
+\small{Full-time \textbf{scientific researcher} into the influence of technical and behavioral characteristics on response procedures in cyber security incidents. The thesis provides the scientific basis to meet the requirements for a proactive and reactive response to cyber security incidents \parencite{Douma2021}.}
+
+\divider
+
+% \cvevent{ASP.NET MVC Web Developer}{\href{https://infocaster.net/}{Infocaster B.V.}}{Jul 2019 -- Jun 2020}{Arnhem, NL}
+% \small{\textbf{ASP.NET MVC Web Developer} for analyzing and resolving database, security, and web-related issues.}
+% \divider
+
+\cvevent{ASP.NET Core 2.0 MVC Web Developer (BSc Thesis)}{\href{https://co-co.nl/}{Co \& Co Solutions}}{Feb 2018 -- Jul 2018}{Rotterdam, NL}
+\small{The GDPR imposed new rules for the processing and transfer of sensitive data. In response, I created a peer-to-peer file transfer tool that can be used to encrypt, upload, and transfer up to 500MB of data via email.}\smallskip
+% This tool includes: a login page with MFA, web pages for data transfer and data request processing, a REST API for handling HTTP requests, and a database for storing user and file credentials (files are stored at the server level).}
+
+\cvsection{Certifications}%http://www.ipgp.fr/~moguilny/LaTeX/fontawesome5Icons.pdf
+\cvachievementaddon{\faCertificate}{\href{https://www.credly.com/badges/b4fa4f17-320e-46d0-b6d4-f5e01901fc45}{Certified Information Systems Security Professional (CISSP)}}{Associate of (ISC)²}{\textcolor{green}{Passed} on May 3, 2022; 100 questions at 105 minutes.}
+\cvachievement{\href{https://www.credly.com/badges/0c2aabfe-2666-4300-908f-7ff42c805ab4}{\faCertificate}}{\href{https://www.credly.com/badges/0c2aabfe-2666-4300-908f-7ff42c805ab4}{Microsoft Security, Compliance, and Identity Fundamentals (SC-900)}}{\textcolor{green}{Passed} on Sep 28, 2021. Grade: 850 out of 1000.}
+\cvachievement{\href{https://www.credly.com/badges/afdc5d80-bfd4-4cb2-933f-efd3774d578f}{\faCertificate}}{\href{https://www.credly.com/badges/afdc5d80-bfd4-4cb2-933f-efd3774d578f}{Microsoft Azure Fundamentals (AZ-900)}}{\textcolor{green}{Passed} on Aug 17, 2021. Grade: 850 out of 1000.}
+% \cvachievement{\faCertificate}{Certified Cloud Security Professional (CCSP)}{\textcolor{red}{In progress...} Planned for June.}
+
+\cvsection{Publications}\label{cv:publications}
+% \nocite{*}
+% \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Master's Thesis in Cyber Security}},type=thesis]
+\cvachievement{\href{https://theses.ubn.ru.nl/handle/123456789/10931}{\faBook}}{\href{https://theses.ubn.ru.nl/handle/123456789/10931}{Master's Thesis in Cyber Security}}{\fullcite{Douma2021}}
+
+\switchcolumn
+
+\cvsection{My Philosophy}
+\begin{quote}
+    "Something clever or sincere, preferably in one sentence."
+\end{quote}
+
+
+\cvsection{Education} %Eventueel: \faCheck
+\cvevent{\href{https://true-security.nl/}{Master in Cyber Security (TRU/e)}}{\href{https://www.ru.nl/}{Radboud University (RU)} \& \href{https://www.tue.nl/en/}{Eindhoven University of Technology (TU/e)}}{Feb 2019 -- Jun 2021}{Nijmegen \& Eindhoven, NL}
+
+\medskip
+
+\cvevent{\href{https://www.ru.nl/courseguides/science/pre-master/pre-master-computing-information-sciences/pre-master-cybersecurity/course-overview-pre-master-cybersecurity/}{Premaster in Cyber Security}}{\href{https://www.ru.nl/}{Radboud University}}{Sep 2018 -- Feb 2019}{Nijmegen, NL}
+
+\medskip
+
+\cvevent{\href{https://www.avans.nl/opleidingen/opleidingzoeker/technische-informatica-s-hertogenbosch-voltijd-bachelor}{Bachelor in Technical Informatics}}{\href{https://www.avans.nl/}{Avans University of Applied Sciences}}{Sep 2013 -- Jun 2018}{'s-Hertogenbosch, NL}
+
+\medskip
+
+\cvevent{Havo Certificate}{\href{https://www.mondialcollege.nl/}{Mondial College}}{Sep 2007 -- jun 2012}{Nijmegen, NL}
+
+\cvsection{Strengths}
+\cvtag{Research \& Analysis}
+\cvtag{Software Proficiency}
+\cvtag{Adaptability}
+\cvtag{Multitasking}
+\cvtag{Self-awareness}
+
+\cvsection{Management skills}
+\cvtag{Teamwork}
+\cvtag{Leadership}
+\cvtag{Communication}
+\cvtag{Planning}
+\cvtag{Negotiator}
+\cvtag{Honest}
+\cvtag{Diligent}
+\cvtag{Motivator}
+\cvtag{Quality Control}
+\cvtag{Agile}
+
+\cvsection{Programming skills}
+\cvskill{LaTeX}{5}
+\cvskill{Git}{4}
+\cvskill{C\#, .NET (MVC \& API)}{3}
+\cvskill{Python}{3}
+\cvskill{SQL}{3}
+
+\cvsection{Languages}
+\cvskill{Dutch}{5}
+\cvskill{English}{5}
+
+\newpage
+
+% \cvsection{Referees}
+
+% % \cvref{name}{email}{mailing address}
+% \cvref{Prof.\ Alpha Beta}{Institute}{a.beta@university.edu}
+% {Address Line 1\\Address line 2}
+
+% \divider
+
+% \cvref{Prof.\ Gamma Delta}{Institute}{g.delta@university.edu}
+% {Address Line 1\\Address line 2}
+
+\end{paracol}
+
+\end{document}
